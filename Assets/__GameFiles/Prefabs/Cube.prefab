@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6580868590576362166}
   - component: {fileID: 8647095640365394306}
   - component: {fileID: 7660973023029964913}
-  - component: {fileID: 742509912404694758}
   - component: {fileID: 1475920356}
+  - component: {fileID: 608651149621012119}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -112,19 +112,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &742509912404694758
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515322714729202686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.1, z: 0.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1475920356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +125,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkOnMat: {fileID: 2100000, guid: 9c54fa372b396554bb2e8a87b50f8fca, type: 2}
-  waitTimer: 0.25
+  waitTimer: 0.4
+--- !u!65 &608651149621012119
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515322714729202686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

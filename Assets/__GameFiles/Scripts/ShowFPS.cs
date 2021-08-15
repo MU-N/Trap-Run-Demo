@@ -13,8 +13,8 @@ public class ShowFPS : MonoBehaviour
 
     void Update()
     {
-        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-        float fps = 1.0f / deltaTime;
+        
+        float fps = 1.0f / Time.deltaTime;
         fpsText.text = Mathf.Ceil(fps).ToString();
 
     }
