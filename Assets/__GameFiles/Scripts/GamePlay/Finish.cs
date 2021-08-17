@@ -13,9 +13,9 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.CompareTag("Player"))
         {
-            Debug.Log("Player");
+            
             winEvent.Raise();
             Instantiate(particle, transform.position,transform.rotation);
             cam1.Priority = 1;

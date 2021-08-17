@@ -475,7 +475,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9220572680386150588}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 52ce8336061a08443b543e6026816c31, type: 2}
   touchStart: {fileID: 11400000, guid: f2624cb133ae524498ebef08a4c7f9f5, type: 2}
+  inHelicopter: {fileID: 11400000, guid: 43227176526889049b1657d01ff55c8d, type: 2}
   moveSpeed: 60
   directinalSpeed: 2
   maxEdgeDis: 4

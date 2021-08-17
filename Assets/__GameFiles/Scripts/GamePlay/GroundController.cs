@@ -8,6 +8,8 @@ public class GroundController : MonoBehaviour
     [SerializeField] private float waitTimer = 0.25f;
     Rigidbody rb;
     Renderer render;
+
+    WaitForSeconds seconds = new WaitForSeconds(.4F);
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,24 +20,20 @@ public class GroundController : MonoBehaviour
         CheckForLocation();
     }
 
-    
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
 
-            StartCoroutine(WaitForTime(waitTimer));
+            StartCoroutine(WaitForFewSeconds());
+
             render.material = walkOnMat;
         }
-        
+
     }
 
-    IEnumerator WaitForTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        rb.isKinematic = false;
-    }
     private void CheckForLocation()
     {
         if (transform.position.y <= -30)
@@ -44,5 +42,10 @@ public class GroundController : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    IEnumerator WaitForFewSeconds()
+    {
 
+        yield return seconds;
+        rb.isKinematic = false;
+    }
 }

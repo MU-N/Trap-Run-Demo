@@ -7,11 +7,10 @@ public class UnderGround : MonoBehaviour
     [SerializeField] GameEvent loseEvent;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             loseEvent.Raise();
 
-            other.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 }

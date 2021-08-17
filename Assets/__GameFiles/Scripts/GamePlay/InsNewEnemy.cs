@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class InsNewEnemy : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    WaitForSeconds seconds = new WaitForSeconds(2f);
+    private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            StartCoroutine(WaitForTime(1.25f));
+            StartCoroutine(WaitForFewSeconds());
+            
         }
     }
-    IEnumerator WaitForTime(float time)
+    IEnumerator WaitForFewSeconds()
     {
-        yield return new WaitForSeconds(time);
-        for (int i = 0; i < 5; i++)
+
+        yield return seconds;
+        for (int i = 0; i < 7; i++)
         {
             GameObject enemy = ObjectPool.SharedInstance.GetFromPool();
             enemy.SetActive(true);
             enemy.transform.position = new Vector3((-3 + i) * 1.2f, 0.5f, transform.position.z);
         }
-
     }
 }

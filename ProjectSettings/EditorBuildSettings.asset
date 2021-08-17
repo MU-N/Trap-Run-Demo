@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/__GameFiles/Scenes/Level 0.unity
-    guid: 3dd9ec9b7f86b3c4ebb5d694a95e04bf
+    path: Assets/__GameFiles/Scenes/Level 1.unity
+    guid: b99cc025c073f62498f0d96d9104bf35
+  - enabled: 1
+    path: Assets/__GameFiles/Scenes/Level 2.unity
+    guid: bcb05a0ee7d6a1d42b00bc41bd90af82
+  - enabled: 1
+    path: Assets/__GameFiles/Scenes/Level 3.unity
+    guid: c178bf974c34d8a47b29177f94df6d50
+  - enabled: 1
+    path: Assets/__GameFiles/Scenes/Level 4.unity
+    guid: 88fa3e2587f6cbe48aee5ede81bf27dd
+  - enabled: 1
+    path: Assets/__GameFiles/Scenes/Level 5.unity
+    guid: 037f63ef8f92d774f851c6e069ffa5bb
   m_configObjects: {}

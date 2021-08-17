@@ -20,6 +20,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] GameObject startTouchMenu;
 
     [SerializeField] TMP_Text crrentLevel;
+    WaitForSeconds seconds = new WaitForSeconds(2);
 
     private int levelsCount;
     private void Start()
@@ -27,7 +28,7 @@ public class UiManager : MonoBehaviour
         OnLevelSart();
         LeanTween.moveX(handImage, 100, 1).setLoopPingPong();
         levelsCount = SceneManager.sceneCountInBuildSettings;
-        crrentLevel.text = "Level " + (((SceneManager.GetActiveScene().buildIndex + 1) % levelsCount) + 1).ToString("00");
+        crrentLevel.text = "Level " + ((SceneManager.GetActiveScene().buildIndex + 1) % levelsCount).ToString("00");
     }
 
 
@@ -40,10 +41,12 @@ public class UiManager : MonoBehaviour
         {
             LeanTween.scale(gameOverMenuElemnts[i], new Vector3(1f, 1f, 1f), .5f).setEaseOutBounce();
         }
-        
+
         gameData.isGameLose = true;
         gameData.isGameStop = true;
-        StartCoroutine(WaitForTime(2));
+        StartCoroutine(WaitForFewSeconds()); 
+        
+        FindObjectOfType<AudioManager>().Play("Lose");
 
 
     }
@@ -62,9 +65,10 @@ public class UiManager : MonoBehaviour
         {
             LeanTween.scale(gameWonMenuElemts[i], new Vector3(1f, 1f, 1f), .5f).setEaseOutBounce();
         }
-        
+
         gameData.isGameWin = true;
         gameData.isGameStop = true;
+        FindObjectOfType<AudioManager>().Play("Win");
     }
     public void OnNextLvel()
     {
@@ -88,9 +92,10 @@ public class UiManager : MonoBehaviour
         Time.timeScale = timeValue;
     }
 
-    IEnumerator WaitForTime(float time)
+    IEnumerator WaitForFewSeconds()
     {
-        yield return new WaitForSeconds(time);
+
+        yield return seconds;
         Time.timeScale = 0;
     }
 }
