@@ -560,6 +560,8 @@ GameObject:
   - component: {fileID: 6680383835708883257}
   - component: {fileID: 1224894636659810620}
   - component: {fileID: 8592876450794511569}
+  - component: {fileID: 524471732}
+  - component: {fileID: 6333985858356502099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -614,9 +616,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65038918f88c5894ea19f06ab672f62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 350
-  directinalSpeed: 3
+  gameData: {fileID: 11400000, guid: 52ce8336061a08443b543e6026816c31, type: 2}
+  touchStart: {fileID: 11400000, guid: f2624cb133ae524498ebef08a4c7f9f5, type: 2}
+  moveSpeed: 60
+  directinalSpeed: 2
   maxEdgeDis: 4
+  afterWinLocations:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!54 &1224894636659810620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -647,6 +654,60 @@ CapsuleCollider:
   m_Height: 1.8441246
   m_Direction: 1
   m_Center: {x: 0, y: 0.9225079, z: 0}
+--- !u!114 &524471732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220572680386150590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05596a78ff3db4fb17e8548852ca61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 43227176526889049b1657d01ff55c8d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6680383835708883257}
+        m_MethodName: OnHelicopter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6333985858356502099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220572680386150590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05596a78ff3db4fb17e8548852ca61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 301b48b841040a144bfe5b0db7ddda50, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6680383835708883257}
+        m_MethodName: MoveAfterWin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9220572680386150592
 GameObject:
   m_ObjectHideFlags: 0
