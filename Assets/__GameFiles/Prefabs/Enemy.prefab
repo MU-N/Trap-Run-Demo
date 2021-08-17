@@ -1105,9 +1105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20bab934028fde5438469ee8d915e436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 52ce8336061a08443b543e6026816c31, type: 2}
   gameLose: {fileID: 11400000, guid: ec8c4f72ecbbdb749872a51561f1cb53, type: 2}
-  enemyMaxSpeed: 70
-  enemyMinSpeed: 50
+  enemyMaxSpeed: 80
+  enemyMinSpeed: 60
 --- !u!54 &8254168571410503871
 Rigidbody:
   m_ObjectHideFlags: 0

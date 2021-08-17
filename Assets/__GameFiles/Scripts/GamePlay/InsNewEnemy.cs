@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InsNewEnemy : MonoBehaviour
 {
-    WaitForSeconds seconds = new WaitForSeconds(2f);
+    WaitForSeconds seconds = new WaitForSeconds(.8f);
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))

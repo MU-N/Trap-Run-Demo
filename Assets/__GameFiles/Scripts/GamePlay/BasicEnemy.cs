@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
+    [SerializeField] GameData gameData;
     [SerializeField] GameEvent gameLose;
     [SerializeField] float enemyMaxSpeed;
     [SerializeField] float enemyMinSpeed;
@@ -20,13 +21,20 @@ public class BasicEnemy : MonoBehaviour
     }
     private void Update()
     {
-        rb.velocity = new Vector3(rb.velocity.x,rb.velocity.y,speed * Time.deltaTime);
-        CheckForLocation();
+        if (!gameData.isGameLose && !gameData.isGameStop && !gameData.isGameWin)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed * Time.deltaTime);
+            CheckForLocation();
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player") && (!gameData.isGameLose && !gameData.isGameStop && !gameData.isGameWin))
         {
             gameLose.Raise();
         }

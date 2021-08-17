@@ -19,7 +19,7 @@ public class Finish : MonoBehaviour
             winEvent.Raise();
             Instantiate(particle, transform.position,transform.rotation);
             cam1.Priority = 1;
-            cam1.Priority = 10;
+            cam2.Priority = 10;
         }
     }
 }

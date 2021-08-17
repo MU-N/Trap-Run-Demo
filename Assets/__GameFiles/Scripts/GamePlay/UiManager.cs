@@ -20,7 +20,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] GameObject startTouchMenu;
 
     [SerializeField] TMP_Text crrentLevel;
-    WaitForSeconds seconds = new WaitForSeconds(2);
+    WaitForSeconds seconds = new WaitForSeconds(0.75f);
 
     private int levelsCount;
     private void Start()
@@ -28,7 +28,7 @@ public class UiManager : MonoBehaviour
         OnLevelSart();
         LeanTween.moveX(handImage, 100, 1).setLoopPingPong();
         levelsCount = SceneManager.sceneCountInBuildSettings;
-        crrentLevel.text = "Level " + ((SceneManager.GetActiveScene().buildIndex + 1) % levelsCount).ToString("00");
+        crrentLevel.text = "Level " + ((SceneManager.GetActiveScene().buildIndex % levelsCount)+1).ToString("00");
     }
 
 
