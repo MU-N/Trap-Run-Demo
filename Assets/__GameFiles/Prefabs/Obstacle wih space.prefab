@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5081642523454115782}
   - component: {fileID: 5081642523454115781}
   - component: {fileID: 5081642523454115780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 5081642523557969430}
   - component: {fileID: 5081642523557969449}
   - component: {fileID: 5081642523557969448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 5081642524807682881}
   - component: {fileID: 5081642524807682880}
   - component: {fileID: 5081642524807682883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 5081642524942882720}
   - component: {fileID: 4029195956887629045}
   - component: {fileID: 4225241632215285548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacle wih space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseEvent: {fileID: 11400000, guid: ec8c4f72ecbbdb749872a51561f1cb53, type: 2}
-  isRight: 0
 --- !u!65 &4029195956887629045
 BoxCollider:
   m_ObjectHideFlags: 0

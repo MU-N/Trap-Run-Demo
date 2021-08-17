@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1057711376}
-  - component: {fileID: 1057711377}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -31,19 +30,6 @@ Transform:
   m_Father: {fileID: 7874000393596856094}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1057711377
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057711375}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1067498, y: 1.4831419, z: 2.2417862}
-  m_Center: {x: 0.15039255, y: 0.24157095, z: -0.620893}
 --- !u!1 &2290745486469816247
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +593,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7874000393596856094}
   - component: {fileID: 8346522559575077371}
+  - component: {fileID: 2866018256678596077}
+  - component: {fileID: 4689949816774884245}
   m_Layer: 0
   m_Name: Helicopter
   m_TagString: Untagged
@@ -654,6 +642,46 @@ MonoBehaviour:
   helicopterParts:
   - {fileID: 6429450056314870476}
   - {fileID: 7899912831095505682}
+--- !u!65 &2866018256678596077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353746038329458084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6528203, y: 1.5447487, z: 3.478011}
+  m_Center: {x: 1.3567663, y: -0.27237368, z: -0.15573724}
+--- !u!114 &4689949816774884245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353746038329458084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b05596a78ff3db4fb17e8548852ca61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 43227176526889049b1657d01ff55c8d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8346522559575077371}
+        m_MethodName: RunWheels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7899912831095505682
 GameObject:
   m_ObjectHideFlags: 0

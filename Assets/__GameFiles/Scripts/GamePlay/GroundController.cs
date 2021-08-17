@@ -15,12 +15,11 @@ public class GroundController : MonoBehaviour
     }
     private void Update()
     {
-        if(transform.position.y<=-30)
-        {
-            rb.isKinematic = true;
-            gameObject.SetActive(false);
-        }
+        CheckForLocation();
     }
+
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -36,6 +35,14 @@ public class GroundController : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         rb.isKinematic = false;
+    }
+    private void CheckForLocation()
+    {
+        if (transform.position.y <= -30)
+        {
+            rb.isKinematic = true;
+            gameObject.SetActive(false);
+        }
     }
 
 }

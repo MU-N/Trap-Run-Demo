@@ -7,6 +7,7 @@ public class PlayerControllers : MonoBehaviour
 {
     [SerializeField] GameData gameData;
     [SerializeField] GameEvent touchStart;
+    [SerializeField] GameEvent inHelicopter;
 
 
     [SerializeField] float moveSpeed = 100;
@@ -26,6 +27,7 @@ public class PlayerControllers : MonoBehaviour
         anim = GetComponent<Animator>();
         isInHelicopter = false;
         ResetGameData();
+        
     }
 
    
@@ -45,7 +47,8 @@ public class PlayerControllers : MonoBehaviour
         }
         if (transform.position == afterWinLocations[0].position)
         {
-            MoveAfterWinForPlane();
+            anim.SetBool("isWin",true);
+            inHelicopter.Raise();
         }
 
     }

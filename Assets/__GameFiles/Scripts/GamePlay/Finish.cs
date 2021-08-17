@@ -15,8 +15,9 @@ public class Finish : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            Debug.Log("Player");
             winEvent.Raise();
-            Instantiate(particle, new Vector3 (transform.position.x , transform.position.y +10 , transform.position.z ), Quaternion.identity);
+            Instantiate(particle, transform.position,transform.rotation);
             cam1.Priority = 1;
             cam1.Priority = 10;
         }

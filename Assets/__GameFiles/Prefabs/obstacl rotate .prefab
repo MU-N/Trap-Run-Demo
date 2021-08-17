@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8955116553161306582}
   - component: {fileID: 8955116553161306577}
   - component: {fileID: 237526235}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'obstacl rotate '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseEvent: {fileID: 11400000, guid: ec8c4f72ecbbdb749872a51561f1cb53, type: 2}
-  isRight: 0
 --- !u!65 &237526235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73,7 +72,7 @@ GameObject:
   - component: {fileID: 8955116553693014211}
   - component: {fileID: 8955116553693014208}
   - component: {fileID: 8955116553693014209}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wepon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +165,7 @@ GameObject:
   - component: {fileID: 8955116553984180621}
   - component: {fileID: 8955116553984180623}
   - component: {fileID: 8955116553984180620}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +244,7 @@ GameObject:
   - component: {fileID: 8955116554742942338}
   - component: {fileID: 8955116554742942364}
   - component: {fileID: 8955116554742942365}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

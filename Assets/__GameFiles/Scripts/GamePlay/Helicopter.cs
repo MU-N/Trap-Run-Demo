@@ -20,8 +20,9 @@ public class Helicopter : MonoBehaviour
     {
         if(other.tag=="Player")
         {
-            inHelicopter.Raise();
             RunWheels();
+            inHelicopter.Raise();
+            
         }
     }
 }

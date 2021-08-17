@@ -27,7 +27,7 @@ public class UiManager : MonoBehaviour
         OnLevelSart();
         LeanTween.moveX(handImage, 100, 1).setLoopPingPong();
         levelsCount = SceneManager.sceneCountInBuildSettings;
-        crrentLevel.text = "Level " + ((SceneManager.GetActiveScene().buildIndex + 1) % levelsCount) + 1.ToString();
+        crrentLevel.text = "Level " + (((SceneManager.GetActiveScene().buildIndex + 1) % levelsCount) + 1).ToString("00");
     }
 
 
@@ -43,6 +43,7 @@ public class UiManager : MonoBehaviour
         
         gameData.isGameLose = true;
         gameData.isGameStop = true;
+        StartCoroutine(WaitForTime(2));
 
 
     }
@@ -85,5 +86,11 @@ public class UiManager : MonoBehaviour
     private void OnChnageTimeScale(float timeValue)
     {
         Time.timeScale = timeValue;
+    }
+
+    IEnumerator WaitForTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Time.timeScale = 0;
     }
 }

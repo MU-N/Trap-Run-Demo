@@ -25,15 +25,15 @@ public class ObjectPool : MonoBehaviour
         AddToPool(amountToPool);
     }
 
-    public GameObject GetFromPool(int index)
+    public GameObject GetFromPool()
     {
         if (pooledObjects.Count == 0)
         {
             AddToPool(1);
 
         }
-        
-         return pooledObjects.Dequeue();
+
+        return pooledObjects.Dequeue();
 
     }
 
@@ -43,17 +43,17 @@ public class ObjectPool : MonoBehaviour
         {
             tmp = Instantiate(objectToPool);
             tmp.SetActive(false);
-            
-                pooledObjects.Enqueue(tmp);
-            
+
+            pooledObjects.Enqueue(tmp);
+
         }
     }
 
     public void ReturnToPool(GameObject returnObject)
     {
         returnObject.SetActive(false);
-            pooledObjects.Enqueue(returnObject);
-       
+        pooledObjects.Enqueue(returnObject);
+
 
     }
 }
